@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header__heading">Generate a <span>random password</span></h1>
+      <p class="header__par">Never use an insecure password again!</p>
+    </header>
+
+    <form action="#" class="form-check">
+      <label for="number">Choose your number</label>
+      <input type="number" name="number" id="input-num" min="5" max="24" />
+    </form>
+    <button class="btn">Generate password</button>
+
+    <form action="#" class="form-password">
+      <input type="text" class="input-el1 input" />
+      <input type="text" class="input-el2 input" />
+      <input type="text" class="input-el3 input" />
+      <input type="text" class="input-el4 input" />
+    </form>
+    <button onclick="copyText()">Copy</button>
+    <script src="script.js"></script>
+  </body>
+</html>
