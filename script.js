@@ -69,13 +69,14 @@ let characters = [
   "=",
   "+",
 ];
-let parEl = document.getElementById("par-el");
-let btnEl = document.querySelector(".btn");
-let inputEl1 = document.querySelector(".input-el1");
-let inputEl2 = document.querySelector(".input-el2");
-let inputEl3 = document.querySelector(".input-el3");
-let inputEl4 = document.querySelector(".input-el4");
-let inputNum = document.getElementById("input-num");
+const parEl = document.getElementById("par-el");
+const btnEl = document.querySelector(".btn");
+const inputEl1 = document.querySelector(".input-el1");
+const inputEl2 = document.querySelector(".input-el2");
+const inputEl3 = document.querySelector(".input-el3");
+const inputEl4 = document.querySelector(".input-el4");
+const inputNum = document.getElementById("input-num");
+const saveBtn = document.querySelectorAll(".save-password");
 // let inputCheckNum = document.getElementById("input-check-num");
 // let inputCheckStr = document.getElementById("input-check-str");
 
@@ -90,6 +91,15 @@ function getRandomPassword(number) {
     str += randomChar();
   }
   return str;
+}
+
+for (let i = 0; i < saveBtn.length; i++) {
+  saveBtn[i].addEventListener("click", function () {
+    const passwordInput = document.querySelector(`.input-el${i + 1}`);
+    passwordInput.select();
+    navigator.clipboard.writeText(passwordInput.value);
+    passwordInput.value = "Password copied!";
+  });
 }
 
 btnEl.addEventListener("click", () => {
@@ -111,9 +121,3 @@ btnEl.addEventListener("click", () => {
     inputEl4.value = getRandomPassword(inputNum.value);
   }
 });
-
-function copyText() {
-  //   inputEl1.select();
-  navigator.clipboard.writeText(inputEl1.value);
-  alert("Copied the text: " + inputEl1.value);
-}
