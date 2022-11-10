@@ -114,3 +114,19 @@ span {
   border: none;
   outline: none;
 }
+
+/* COPY BUTTON */
+
+.save-password {
+  border: none;
+  padding: 1.6rem 3.2rem;
+  font-size: 2rem;
+  color: #51cf66;
+  background-color: #171d22;
+  border-radius: 40px;
+  font-family: inherit;
+  text-transform: uppercase;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  margin-left: 1rem;
+}
